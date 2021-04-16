@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Release") {
         	steps {
-				sh "release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
+				sh "mvn release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
 				sh "mvn release:perform"
             }
         }
