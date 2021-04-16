@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.rygn</groupId>
   <artifactId>first_mvn_nexus</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <properties>
@@ -12,6 +12,7 @@
   <scm>
   	<url>scm:git:file:///home/rgirodon/repositories/first_mvn_nexus/.git</url>
     <developerConnection>scm:git:file:///home/rgirodon/repositories/first_mvn_nexus/.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
@@ -44,6 +45,10 @@
   </build>
   
   <distributionManagement>
+  	<repository>
+   		<id>nexus-releases</id>
+      	<url>http://localhost:8081/repository/maven-releases/</url>
+   	</repository>
   	<snapshotRepository>
     	<id>nexus-snapshots</id>
       	<url>http://localhost:8081/repository/maven-snapshots/</url>
