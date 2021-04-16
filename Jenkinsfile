@@ -17,6 +17,10 @@ pipeline {
         }
         stage("Release") {
         	steps {
+        		sh '''
+                git config user.email "jenkins@rygn.org"
+                git config user.name "Jenkins (release job)"
+                '''
 				sh "mvn release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
 				sh "mvn release:perform"
             }
