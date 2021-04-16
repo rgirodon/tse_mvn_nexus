@@ -11,7 +11,7 @@
   
   <scm>
   	<url>scm:git:https://github.com/rgirodon/tse_mvn_nexus.git</url>
-    <developerConnection>scm:git:https://github.com/rgirodon/tse_mvn_nexus.git</developerConnection>
+    <developerConnection>scm:git:git@github.com/rgirodon/tse_mvn_nexus.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
