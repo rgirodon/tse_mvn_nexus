@@ -12,13 +12,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh "mvn -B -DskipTests clean package" 
             }
         }
         stage("Release") {
         	steps {
-				sh 'release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT'
-				sh 'mvn release:perform'
+				sh "release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
+				sh "mvn release:perform"
             }
         }
     }
