@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.rygn</groupId>
   <artifactId>first_mvn_nexus</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <properties>
@@ -12,7 +12,7 @@
   <scm>
   	<url>scm:git:file:///home/rgirodon/repositories/first_mvn_nexus/.git</url>
     <developerConnection>scm:git:file:///home/rgirodon/repositories/first_mvn_nexus/.git</developerConnection>
-    <tag>first_mvn_nexus-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
