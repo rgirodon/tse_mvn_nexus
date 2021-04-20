@@ -13,7 +13,7 @@ pipeline {
         stage("Release") {
         	steps {
         		sh '''
-                git config user.email "jenkins@rygn.org"
+                git config user.email "remy.girodon@gmail.com"
                 git config user.name "Jenkins (release job)"
                 '''
                 sh "mvn release:clean"
