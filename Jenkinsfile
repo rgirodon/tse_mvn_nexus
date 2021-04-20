@@ -14,7 +14,7 @@ pipeline {
         	steps {
         		sh '''
                 git config user.email "remy.girodon@gmail.com"
-                git config user.name "Jenkins (release job)"
+                git config user.name "rgirodon"
                 '''
                 sh "mvn -B release:clean"
 				sh "mvn -B release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
