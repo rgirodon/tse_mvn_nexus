@@ -10,9 +10,9 @@
   </properties>
   
   <scm>
-  	<url>scm:git:https://github.com/rgirodon/tse_mvn_nexus.git</url>
-    <developerConnection>scm:git:https://github.com/rgirodon/tse_mvn_nexus.git</developerConnection>
-    <tag>HEAD</tag>
+  	<url>scm:git:git@github.com:rgirodon/tse_mvn_nexus.git</url>
+    <developerConnection>scm:git:git@github.com:rgirodon/tse_mvn_nexus.git</developerConnection>
+    <tag>head</tag>
   </scm>
 
   <dependencies>
