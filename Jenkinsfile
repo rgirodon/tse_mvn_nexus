@@ -16,9 +16,9 @@ pipeline {
                 git config user.email "remy.girodon@gmail.com"
                 git config user.name "Jenkins (release job)"
                 '''
-                sh "mvn release:clean"
-				sh "mvn release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
-				sh "mvn release:perform"
+                sh "mvn -B release:clean"
+				sh "mvn -B release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
+				sh "mvn -B release:perform"
             }
         }
     }
