@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.rygn</groupId>
   <artifactId>first_mvn_nexus</artifactId>
-  <version>1.8</version>
+  <version>1.9-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <properties>
@@ -11,7 +11,7 @@
   
   <scm>
     <developerConnection>scm:git:https://${env.GIT_USERNAME}:${env.GIT_PASSWORD}@github.com/rgirodon/tse_mvn_nexus.git</developerConnection>
-    <tag>first_mvn_nexus-1.8</tag>
+    <tag>HEAD</tag>
   	<url>scm:git:https://${env.GIT_USERNAME}:${env.GIT_PASSWORD}@github.com/rgirodon/tse_mvn_nexus.git</url>
   </scm>
 
