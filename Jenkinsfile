@@ -12,13 +12,19 @@ pipeline {
         }
         stage("Release") {
         	steps {
-        		sh '''
-                git config user.email "remy.girodon@gmail.com"
-                git config user.name "rgirodon"
-                '''
-                sh "mvn -B release:clean"
-				sh "mvn -B release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
-				sh "mvn -B release:perform"
+        		withCredentials([[$class: 'Github_rgirodon', 
+				    credentialsId: 'id-of-credentials-from-those-set-up-in-Manage-Jenkins', 
+				    usernameVariable: 'GIT_USERNAME',
+				    passwordVariable: 'GIT_PASSWORD'
+				]]) {
+	        		sh '''
+	                git config user.email "remy.girodon@gmail.com"
+	                git config user.name "rgirodon"
+	                '''
+	                sh "mvn -B release:clean"
+					sh "mvn -B release:prepare -DreleaseVersion=${params.ReleaseVersion} -DdevelopmentVersion=${params.DevVersion}-SNAPSHOT"
+					sh "mvn -B release:perform"
+				}
             }
         }
     }
