@@ -12,8 +12,8 @@ pipeline {
         }
         stage("Release") {
         	steps {
-        		withCredentials([[$class: 'Github_rgirodon', 
-				    credentialsId: 'id-of-credentials-from-those-set-up-in-Manage-Jenkins', 
+        		withCredentials([[$class: 'UsernamePasswordMultiBinding', 
+				    credentialsId: 'Github_rgirodon', 
 				    usernameVariable: 'GIT_USERNAME',
 				    passwordVariable: 'GIT_PASSWORD'
 				]]) {
